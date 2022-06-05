@@ -15,5 +15,24 @@ The following are not valid abbreviations:
 A substring is a contiguous non-empty sequence of characters within a string.
 '''
 
-def wordAbbreviation(word, abbr):
-    
+def wordAbbreviation(word, abbr) -> bool:
+    wordLength, digit = 0, 0
+    for character in abbr:
+        if character.isdigit():
+            if digit == 0 and character == '0':
+                return False
+            digit = digit*10 + int(character)
+        else:
+            if digit != 0:
+                wordLength += digit
+                digit = 0
+            if wordLength >= len(word) or word[wordLength] != character:
+                return False
+            wordLength += 1
+    if digit != 0:
+        wordLength += digit
+
+    return wordLength == len(word)
+
+print("Input: internationalization, i12iz4n Output:",wordAbbreviation("internationalization", "i12iz4n"))
+print("Input: apple, a2e                    Output:",wordAbbreviation("apple", "a2e"))
