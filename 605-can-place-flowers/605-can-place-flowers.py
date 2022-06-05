@@ -10,5 +10,7 @@ class Solution:
             elif flowerbed[i - 1] == flowerbed[i + 1] == 0:
                 n-=1
                 flowerbed[i] = 1
-                if n == 0:return True
+                if n == 0:
+                    return True
+        
         return False
