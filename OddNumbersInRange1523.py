@@ -6,3 +6,4 @@ Given two non-negative integers low and high. Return the count of odd numbers be
 
 def countOdds(low: int, high: int) -> int:
         return (high + 1) // 2 - low // 2
+
