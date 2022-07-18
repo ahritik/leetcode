@@ -15,4 +15,4 @@ The answer may be very large, so return it modulo 109 + 7.
 '''
 
 def checkRecord(int n):
-    
+	
