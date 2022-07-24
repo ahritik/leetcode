@@ -1,2 +1,3 @@
-# leetcode
-LeetCode Solutions
+#leetcode #python
+LeetCode Solutions In Python
+Hritik Arasu
